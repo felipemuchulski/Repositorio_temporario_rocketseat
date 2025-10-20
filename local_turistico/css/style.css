@@ -1,0 +1,49 @@
+:root {
+    --cor-fundo: #f5f4f0;
+    --cor-titulo: #E1624F;
+    /*Adicionar as demais cores depois*/
+
+    --fonte-principal: 'Open Sans', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--cor-fundo);
+}
+
+.container {
+    width: 1120px;
+    margin: 88px auto;
+    padding: 0 20px;
+
+}
+
+.headline {
+    color: var(--cor-titulo);
+    font-family: var(--fonte-principal);
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.title-page h1 {
+    font-family: var(--fonte-principal);
+    font-weight: bold;
+    font-size: 3.6rem;
+}
+
+.title-page {
+    text-align: left;
+    margin-bottom: 4.0rem;
+}
+
+.section-imagem-descricao p {
+    font-family: var(--fonte-principal);
+    font-weight: 300;
+    font-style: italic;
+    font-size: 16px;
+}
