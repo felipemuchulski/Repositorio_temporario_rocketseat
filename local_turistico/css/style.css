@@ -3,6 +3,10 @@
     --cor-titulo: #E1624F;
     --cor-do-texto: #1B1B1B;
     --cor-primaria-border: #D9D9D9;
+    --cor-texto-aside: #0C51A7;
+    --cor-casais: #E95E10;
+    --cor-familia: #E5245E;
+    --cor-desconto: #591B98;
     /*Adicionar as demais cores depois*/
 
     --fonte-principal: 'Open Sans', sans-serif;
@@ -90,6 +94,15 @@ body {
     font-size: 16px;
 }
 
+.paragrafo-2 {
+    font-family: var(--fonte-principal);
+    color: var(--cor-do-texto);
+    
+    font-style: normal;
+    font-size: 16px;
+    text-align: center;
+}
+
 .aside-config {
   margin-top: 16px;
   font-size: 16px;
@@ -98,7 +111,7 @@ body {
 
 .aside-config h3 {
   margin-bottom: 8px;
-  font-weight: 600;
+  font-weight: bold;
 }
 
 .aside-config ul {
@@ -108,4 +121,35 @@ body {
 
 .aside-config li {
   margin-bottom: 5px; 
+}
+
+.hist {
+    color: var(--cor-texto-aside);
+    font-weight: bold;
+}
+
+.casais {
+    color: var(--cor-casais);
+    font-weight: bold;
+}
+
+.familia {
+    color: var(--cor-familia);
+    font-weight: bold;
+}
+
+.orcamento {
+    color: var(--cor-desconto);
+    font-weight: bold;
+}
+
+.divisor-2 {
+    
+    color: var(--cor-primaria-border);
+    margin-bottom: 40px;
+}
+
+.rodape {
+    text-align: center;
+    font-family: var(--fonte-principal);
 }
