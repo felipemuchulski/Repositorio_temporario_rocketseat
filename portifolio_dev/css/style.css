@@ -25,9 +25,17 @@
 }
 
 .container {
-    width: 1366px;
-    margin: 80px auto;
-    padding: 0 20px;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.info {
+   background-image: url('/img/Background_Intro.png');
+   background-size: cover;
+   background-position: center;
+   height: 100vh;
+   width: 100vw;
 }
 
 .header-config {
@@ -59,4 +67,84 @@
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+.subtitle-header {
+    font-family: var(--font-family-inconsolata);
+    font-size: 20px;
+    line-height: 120%;
+    font-style: normal;
+    color: var(--cor-base-gray-200);
+}
+
+.subtitle-header .nome {
+    color: var(--cor-principal-red);
+}
+
+.title {
+    font-family: var(--font-family-asap);
+    font-size: 56px;
+    font-weight: bold;
+    line-height: 120%;
+
+    color: var(--cor-base-gray-100);
+    
+}
+
+.text-sm {
+    font-family: var(--font-family-maven-pro);
+    font-size: 16px;
+    line-height: 140%;
+    font-weight: normal;
+
+    color: var(--cor-base-gray-300);
+
+    margin-bottom: 80px;
+}
+
+.text-md {
+    font-family: var(--font-family-maven-pro);
+    font-size: 16px;
+    line-height: 140%;
+    
+    
+    color: var(--cor-base-gray-200);
+}
+.tech-cards {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+}
+
+.card-list {
+    width: auto;
+    height: 40px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--cor-base-gray-400);
+
+    border-radius: 50px;
+   
+}
+
+.card-list figure {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.card-list img {
+    margin-left: 10px;
+}
+
+.card-list figcaption {
+    margin-right: 16px;
 }
