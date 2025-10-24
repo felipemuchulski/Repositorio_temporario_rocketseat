@@ -38,8 +38,15 @@
    width: 100vw;
 }
 
+.config-info {
+    margin: 120px 163px 94px 163px;
+}
+
 .header-config {
    text-align: center;
+   max-width: 680px;
+   margin: 0 auto;
+   width: 100%;
 }
 
 .avatar-wrapper {
@@ -89,6 +96,7 @@
 
     color: var(--cor-base-gray-100);
     
+    margin-bottom: 20px;
 }
 
 .text-sm {
@@ -117,6 +125,8 @@
     list-style: none;
     padding: 0;
     margin: 0;
+
+    margin-bottom: 60px;
 
 }
 
@@ -147,4 +157,11 @@
 
 .card-list figcaption {
     margin-right: 16px;
+}
+
+.vector-baixo {
+    display: block;
+    margin: 40px auto 0 auto;
+    width: auto;
+    max-width: 100%;
 }
