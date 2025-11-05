@@ -290,3 +290,41 @@ html, body {
 }
 
 /* CRIADO ESTILOS DE CONTADO*/
+.contact {
+    background-image: url("/img/Background_Contacts.png");
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    width: 100vw;
+}
+
+.subtitle-ag {
+    font-family: var(--font-family-inconsolata);
+    color: var(--cor-principal-purple);
+    font-size: 20px;
+    line-height: 140%;
+    font-style: normal;
+
+    margin-top: 20px;
+}
+
+.contatos-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    margin-top: 48px;
+}
+
+.contato-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 400px; 
+    height: 68px;
+    margin: 0 auto;
+    padding: 20px;
+
+    background-color: var(--cor-base-gray-400);
+    border-radius: 8px;
+}
