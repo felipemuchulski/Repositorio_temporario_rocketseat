@@ -173,6 +173,44 @@ html, body {
     margin-bottom: 57px;
 }
 
+/*CRIADO CSSS DE PROJETOS */
+.projetos {
+    background-color: var(--cor-base-gray-500);
+    width: 100vw;
+}
+
+.grid-projetos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+
+    margin-top: 56px;
+    margin-bottom: 144px;
+
+    justify-items: center;
+}
+
+.card-projeto {
+    width: 330px;
+    height: 280px;
+
+    background-color: var(--cor-base-gray-400);
+    border-radius: 12px;
+}
+
+.card-projeto img {
+    width: 306px;
+    height: 156px;
+    
+    border-radius: 12px;
+
+    margin: 12px 12px 20px 12px;
+}
+
+.card-projeto h4 {
+    margin-bottom: 8px;
+}
+
  /* CRIADO CSS DE SERVICES */
 
 .services {
@@ -207,6 +245,7 @@ html, body {
     gap: 24px;
 
     margin-top: 56px;
+    margin-bottom: 120px;
 }
 
 .card-service {
@@ -249,3 +288,5 @@ html, body {
     margin-right: 20px;
     margin-bottom: 20px;
 }
+
+/* CRIADO ESTILOS DE CONTADO*/
