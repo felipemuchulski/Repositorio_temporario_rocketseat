@@ -9,6 +9,51 @@
     <title>Formulario - Festive </title>
 </head>
 <body>
-    <section class=""></section>
+    <!--Colocar a imagem de background-->
+    <section class="brand">
+        <img src="/assets/imgs/Logo.svg" alt="Confetes">
+        <h1 class="logo">Festivite</h1>
+        <p class="body-md">Crie um convite digital para o seu evento</p>
+    </section>
+
+    <main>
+        <h2 class="heading-md">Crie o seu convite</h2>
+        <form action="" class="formulario">
+            <section class="primeira-section">
+                <img src="/assets/imgs/calendar.svg" alt="icone de calendarios">
+                <h3 class="heading-sm">Sobre o evento</h3>
+
+                <div class="card-titulo">
+                    <label for="nome-evento" class="body-sm">Titulo</label>
+                    <input type="text" placeholder="Nome do evento" class="body-md" id="nome-evento">
+                </div>
+
+                <div class="card-datas">
+                    <label for="data-inicial" class="body-sm">Inicio</label>
+                    <input type="date" name="" id="data-inicial" class="input-date" placeholder="DD/MM/AAAA, --:--">
+
+                    <label for="data-final" class="body-sm">Fim</label>
+                    <input type="date" name="" id="data-final" class="input-date" placeholder="DD/MM/AAAA, --:--">
+                </div>
+
+                <div class="controle-endereco">
+                        <label for="" class="body-sm">Tipo</label>
+                        <div class="toggle-container">
+                            <input type="radio" id="presencial">
+                            <label for="presencial" class="toggle-option body-sm">
+                                <img src="/assets/imgs/building-2.svg" alt="">
+                                Presencial
+                            </label>
+
+                            <input type="radio" id="online" name="tipo" value="online">
+                            <label for="online" class="toggle-option body-sm">
+                                <img src="/assets/imgs/video.svg" alt="Online">
+                                Online
+                            </label>
+                        </div>
+                </div>
+            </section>
+        </form>
+    </main>
 </body>
 </html>
