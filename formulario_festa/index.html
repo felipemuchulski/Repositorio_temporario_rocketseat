@@ -51,9 +51,118 @@
                                 Online
                             </label>
                         </div>
+                        <div class="textarea">
+                            <label for="descricao">Descrição</label>
+                            <textarea name="" id="descricao" placeholder="Escreva os detalhes do evento"></textarea>
+                        </div>
+                </div>
+
+                <div class="personalizacao">
+                    <img src="/assets/imgs/paintbrush-vertical.svg" alt="pincel na vertical">
+                    <h3 class="heading-md"> Personalização </h3>
+                    <p class="body-sm">Cor principal</p>
+
+                    <div class="toggle-cores">
+                        <input type="radio" class="azul-cor">
+                        <input type="radio" class="roxo-cor">
+                        <input type="radio" class="roxo-claro-cor">
+                        <input type="radio" class="rosa-cor">
+                        <input type="radio" class="rosa-forte-cor">
+                        <input type="radio" class="danger-cor">
+                        <input type="radio" class="laranja-cor">
+                        <input type="radio" class="amarelo-cor">
+                        <input type="radio" class="lima-cor">
+                        <input type="radio" class="verde-cor">
+                        <input type="radio" class="ciano-cor">
+                    </div>
+
+
+                    <div class="tema-evento">
+                        <p class="body-sm"> Tema do evento </p>
+                        
+                        <div class="card-evento">
+                            <img src="/assets/imgs/aniversario.png" alt="foto de um bolo de aniversário">
+                            <p class="body-sm">Aniversário</p>
+                        </div>
+
+                        <div class="card-evento">
+                            <img src="/assets/imgs/infantil.png" alt="itens infantis">
+                            <p class="body-sm">Infantil</p>
+                        </div>
+
+                        <div class="card-evento">
+                            <img src="/assets/imgs/formatura.png" alt="Chapéu de formatura">
+                            <p class="body-sm">Casamento</p>
+                        </div>
+
+                        <div class="card-evento">
+                            <img src="/assets/imgs/cha_bebe.png" alt="Chá de bebe">
+                            <p class="body-sm">Chá de bebe</p>
+                        </div>
+
+                        <div class="card-evento">
+                            <img src="/assets/imgs/cha_panela.png" alt="Chá de panela">
+                            <p class="body-sm">Chá de panela</p>
+                        </div>
+
+                        <div class="card-evento">
+                            <img src="/assets/imgs/carnaval.png" alt="Confetes de carnaval">
+                            <p class="body-sm">Páscoa</p>
+                        </div>
+
+                        <div class="card-evento">
+                            <img src="/assets/imgs/sao_joao.png" alt="Bandeiras de São João">
+                            <p class="body-sm">São João</p>
+                        </div>
+
+                        <div class="card-evento">
+                            <img src="/assets/imgs/halloween.png" alt="Abóboras de Halloween">
+                            <p class="body-sm">Halloween</p>
+                        </div>
+
+                        <div class="card-evento">
+                            <img src="/assets/imgs/outro.png" alt="Mãos de pessoas se unindo">
+                            <p class="body-sm">Outro</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dados-contratos">
+                    <img src="/assets/imgs/contact.svg" alt="Quadro de contatos">
+                    <h2 class="heading-md"> Dados para contato</h2>
+
+                    <div class="formulario-cadastro">
+                        <label for="nome-cadastro">Nome</label>
+                        <input type="text" placeholder="Nome completo" id="nome-cadastro">
+
+                        <label for="email">E-mail</label>
+                        <input type="email" name="" id="email" placeholder="exemplo@email.com">
+
+                        <label for="telefone-cadastro">Telefone</label>
+                        <input type="number" name="" id="telefone-cadastro" placeholder="(99) 99999-9999">
+                    </div>
                 </div>
             </section>
         </form>
     </main>
+
+    <hr>
+    <footer class="footer">
+        <div class="formulario-validacoes">
+            <input type="checkbox" name="" id="condicoes">
+            <label for="condicoes">Li e concordo com os <a href="#">Termos e Condições</a> e com a <a href="#">Política de Privacidade</a></label>
+
+            <input type="checkbox" id="promo-email">
+            <label for="promo-email">Aceito receber atualizações e promoções por e-mail</label>
+
+            <input type="checkbox" id="promo-sms">
+            <label for="promo-sms">Aceito receber atualizações e promoções por SMS</label>
+        </div>
+
+        <button>
+            <img src="/assets/imgs/ticket.svg" alt="ticket de bilhete">
+            Gerar convite
+        </button>
+    </footer>
 </body>
 </html>
