@@ -24,10 +24,65 @@
     --shape-hover: #383D42;
 
     --text-body: #C8CDD0;
-    -text-heading: #F9F9F9;
+    --text-heading: #F9F9F9;
 
     --font-family-leckerli: "Leckerli One", cursive;
     --font-family-baloo: "Baloo 2", sans-serif;
     --font-family-open: "Open Sans", sans-serif;
 
+}
+
+/*TIPOGRÁFIA ESTRUTURADA*/
+
+.logo {
+    font-family: var(--font-family-leckerli);
+    font-size: 40px;
+    line-height: auto;
+    line-height: normal;
+
+    color: var(--color-pink);
+}
+
+.heading-md {
+    font-family: var(--font-family-baloo);
+    font-size: 28px;
+    line-height: auto;
+    font-weight: bold;
+
+    color: var(--text-heading);
+}
+
+.heading-sm {
+    font-size: 18px;
+    line-height: auto;
+    font-weight: bold;
+    font-family: var(--font-family-baloo) ;
+    color: var(--text-body);
+}
+
+.body-md {
+    font-family: var(--font-family-open);
+    font-size: 16px;
+    line-height: auto;
+    font-weight: normal;
+
+    color: var(--text-heading);
+}
+
+.body-sm {
+    font-family: var(--font-family-open);
+    font-size: 14px;
+    line-height: auto;
+    font-weight: bolder;
+
+    color: var(--text-body);
+}
+
+.body-sm-especial {
+    font-family: var(--font-family-open);
+    font-size: 14px;
+    line-height: auto;
+    font-weight: bolder;
+
+    color: white;
 }
