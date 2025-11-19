@@ -85,6 +85,18 @@ a {
     color: inherit; /* Herda cor do elemento pai */
 }
 
+a:hover {
+    background: linear-gradient(
+        90deg,
+        var(--brand-color-secondary) 0%,
+        var(--brand-color-primary) 100%
+    );
+    
+    -webkit-background-clip:text;
+    background-clip: text;
+    color: transparent;
+}
+
 /* LISTAS SEM MARCADORES */
 ul[role=""] {
     list-style: none; /* Remove bullets das listas */
