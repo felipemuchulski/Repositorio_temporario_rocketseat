@@ -1,44 +1,79 @@
+/* BOTÃO BASE - Estilo padrão para todos os botões */
 .btn {
-    border: 0;
-    background-color: transparent;
-    --btn-bg-color: var(--text-color-primary);
-    --btn-color: var(--bg-color);
+    border: 0; /* Remove borda padrão */
+    background-color: transparent; /* Fundo transparente inicial */
+    
+    /* Variáveis customizáveis do botão */
+    --btn-bg-color: var(--text-color-primary); /* Cor de fundo (branco) */
+    --btn-color: var(--bg-color); /* Cor do texto (preto) */
 
+    /* Layout flexbox para centralizar conteúdo */
     display: flex;
-    align-items: center;
-    justify-content: center;
-    width: fit-content;
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    width: fit-content; /* Largura ajusta ao conteúdo */
 
-    border-radius: .5rem;
+    border-radius: .5rem; /* Bordas arredondadas */
 
+    /* Fonte: peso médio, tamanho base, altura 24px, família Inter */
     font: var(--fw-md) var(--fs-base)/1.5rem var(--ff-sans);
 
-    cursor: pointer;
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
 
-    background-color: var(--btn-bg-color);
+    /* Aplica as cores definidas nas variáveis */
+    background: var(--btn-bg-color);
     color: var(--btn-color);
 }
 
+/* EFEITO HOVER - Gradient laranja para amarelo */
 .btn:hover {
     --btn-bg-color: linear-gradient(
-        90deg,
-        var(--brand-color-secondary) 0%,
-        var(--brand-color-primary) 100%
+        90deg, /* Direção horizontal */
+        var(--brand-color-secondary) 0%, /* Laranja no início */
+        var(--brand-color-primary) 100% /* Amarelo no final */
     );
-    --btn-color: var(--surface-color)
+    --btn-color: var(--surface-color); /* Texto cinza escuro */
 }
 
+/* TAMANHOS DE BOTÃO */
+
+/* Botão pequeno */
 .btn-sm {
-    padding: .5rem 1rem;
-    font-size: var(--fs-sm);
+    padding: .5rem 1rem; /* 8px vertical, 16px horizontal */
+    font-size: var(--fs-sm); /* 14px */
 }
 
+/* Botão médio */
 .btn-md {
-    padding: .75rem 1.5rem;
-    font-size: var(--fs-base);
+    padding: .75rem 1.5rem; /* 12px vertical, 24px horizontal */
+    font-size: var(--fs-base); /* 16px */
 }
 
+/* Botão grande */
 .btn-lg {
-    padding: 1rem 2rem;
-    font-size: 1.125rem;
+    padding: 1rem 2rem; /* 16px vertical, 32px horizontal */
+    font-size: 1.125rem; /* 18px */
+}
+
+/* BOTÃO COM TEXTO GRADIENT (usando aria-label) */
+.btn[aria-label] {
+    position: relative; /* Para posicionar pseudo-elementos */
+
+    /* Pseudo-elemento para criar fundo */
+    &::before {
+        content: ""; /* Conteúdo vazio */
+        position: absolute; /* Posicionamento absoluto */
+        border-radius: inherit; /* Herda border-radius do pai */
+        inset: 0.09375rem; /* Margem interna de 1.5px */
+        background-color: var(--bg-color); /* Fundo preto */
+    }
+
+    /* Pseudo-elemento para texto com gradient */
+    &::after {
+        content: attr(aria-label); /* Usa o valor do aria-label como texto */
+        background: var(--btn-bg-color); /* Aplica gradient como fundo */
+        -webkit-background-clip: text; /* Recorta fundo apenas no texto (WebKit) */
+        background-clip: text; /* Recorta fundo apenas no texto */
+        color: transparent; /* Torna o texto transparente para mostrar o gradient */
+    }
 }

@@ -1,91 +1,107 @@
+/* RESET CSS - Remove estilos padrão do navegador */
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+    box-sizing: border-box; /* Inclui padding e border no cálculo da largura */
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    font: inherit;
+    margin: 0; /* Remove margem padrão */
+    padding: 0; /* Remove padding padrão */
+    font: inherit; /* Herda fonte do elemento pai */
 
+    /* Suavização de fonte para melhor legibilidade */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
+/* VARIÁVEIS CSS - Design System */
 :root {
-    --bg-color: #09090b;
-    --surface-color: #18181b;
-    --stroke-color: #27272A;
-    --text-color-primary: #f4f4f5;
-    --text-color-secondary: #a1a1aa;
-    --brand-color: #f7b733;
-    --brand-color-secondary: #FC4A1A;
+    /* CORES */
+    --bg-color: #09090b; /* Cor de fundo principal (preto) */
+    --surface-color: #18181b; /* Cor de superfície (cinza escuro) */
+    --stroke-color: #27272A; /* Cor de bordas */
+    --text-color-primary: #f4f4f5; /* Cor de texto principal (branco) */
+    --text-color-secondary: #a1a1aa; /* Cor de texto secundário (cinza) */
+    --brand-color: #f7b733; /* Cor da marca (amarelo) */
+    --brand-color-primary: #f7b733; /* Cor primária da marca (amarelo) */
+    --brand-color-secondary: #FC4A1A; /* Cor secundária da marca (laranja) */
 
-    --ff-sans: 'Inter', system-ui, sans-serif;
-    --fw-base: 400;
-    --fw-md: 500;
-    --fw-bold: 800;
+    /* FONTES */
+    --ff-sans: 'Inter', system-ui, sans-serif; /* Família de fonte */
+    --fw-base: 400; /* Peso normal */
+    --fw-md: 500; /* Peso médio */
+    --fw-bold: 800; /* Peso negrito */
 
-    --fs-sm: 0.875rem;
-    --fs-base: 1rem;
-    --fs-lg: 1.25rem;
-    --fs-xl: 1.5rem;
-    --fs-2xl: 2.5rem;
+    /* TAMANHOS DE FONTE */
+    --fs-sm: 0.875rem; /* 14px - Pequeno */
+    --fs-base: 1rem; /* 16px - Base */
+    --fs-lg: 1.25rem; /* 20px - Grande */
+    --fs-xl: 1.5rem; /* 24px - Extra grande */
+    --fs-2xl: 2.5rem; /* 40px - Muito grande */
 
-    --px-lg: 1.5rem;
+    /* ESPAÇAMENTOS */
+    --px-lg: 1.5rem; /* Padding horizontal grande */
 }
 
+/* ESTILOS BASE DO HTML */
 html {
-    font-family: var(--ff-sans);
-    font-weight: var(--fw-base);
-    font-size: var(--fs-base);
-    line-height: 1.6;
-    color: var(--text-color-primary);
+    font-family: var(--ff-sans); /* Define fonte padrão */
+    font-weight: var(--fw-base); /* Peso normal */
+    font-size: var(--fs-base); /* Tamanho base 16px */
+    line-height: 1.6; /* Altura da linha para legibilidade */
+    color: var(--text-color-primary); /* Cor de texto padrão */
 }
 
+/* FUNDO DA PÁGINA */
 body {
-    background-color: var(--bg-color);
+    background-color: var(--bg-color); /* Fundo preto */
 }
 
+/* ESTILOS DOS TÍTULOS */
 h1, h2, h3 {
-    line-height: 1.2;
-    color: var(--text-color-primary);
-    font-weight: bold;
-    letter-spacing: -0.04em;
+    line-height: 1.2; /* Altura menor para títulos */
+    color: var(--text-color-primary); /* Cor branca */
+    font-weight: bold; /* Negrito */
+    letter-spacing: -0.04em; /* Espaçamento entre letras mais apertado */
 }
 
+/* TAMANHOS ESPECÍFICOS DOS TÍTULOS */
 h1 {
-    font-size: var(--fs-2xl);
+    font-size: var(--fs-2xl); /* 40px */
 }
 
 h2 {
-    font-size: var(--fs-xl);
+    font-size: var(--fs-xl); /* 24px */
 }
 
 h3 {
-    font-size: var(--fs-lg);
+    font-size: var(--fs-lg); /* 20px */
 }
 
+/* LINKS SEM DECORAÇÃO */
 a {
-    text-decoration: none;
-    color: inherit;
+    text-decoration: none; /* Remove sublinhado */
+    color: inherit; /* Herda cor do elemento pai */
 }
 
+/* LISTAS SEM MARCADORES */
 ul[role=""] {
-    list-style: none;
+    list-style: none; /* Remove bullets das listas */
 }
 
-/* RESPONSIVIDADE PARA MOBILE */
-@media (width >= 80em) {
+/* RESPONSIVIDADE PARA DESKTOP */
+@media (width >= 80em) { /* 1280px ou mais */
     :root {
-        --fs-lg: 2rem;
-        --fs-xl: 3rem;
-        --fs-2xl: 4rem;
+        /* TAMANHOS MAIORES PARA DESKTOP */
+        --fs-lg: 2rem; /* 32px */
+        --fs-xl: 3rem; /* 48px */
+        --fs-2xl: 4rem; /* 64px */
 
-        --py-base: 1.5rem;
-        --py-lg:2.5rem;
-        --py-xl: 5rem;
-        --px-lg: 2rem;
+        /* ESPAÇAMENTOS MAIORES PARA DESKTOP */
+        --py-base: 1.5rem; /* Padding vertical base */
+        --py-lg: 2.5rem; /* Padding vertical grande */
+        --py-xl: 5rem; /* Padding vertical extra grande */
+        --px-lg: 2rem; /* Padding horizontal maior */
     }
 }

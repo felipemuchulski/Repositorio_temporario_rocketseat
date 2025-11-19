@@ -1,59 +1,69 @@
+/* CLASSES UTILITÁRIAS - PADDING VERTICAL */
 .py-base {
-    padding-block: var(--py-base);
+    padding-block: var(--py-base); /* Padding em cima e embaixo - tamanho base */
 }
 
 .py-lg {
-    padding-block: var(--py-lg);
+    padding-block: var(--py-lg); /* Padding em cima e embaixo - tamanho grande */
 }
-
 
 .py-xl {
-    padding-block: var(--py-xl);
+    padding-block: var(--py-xl); /* Padding em cima e embaixo - tamanho extra grande */
 }
 
+/* CLASSE UTILITÁRIA - PADDING HORIZONTAL */
 .px-lg {
-    padding-inline: var(--px-lg);
+    padding-inline: var(--px-lg); /* Padding nas laterais - tamanho grande */
 }
 
+/* CONTAINER RESPONSIVO */
 .container {
-    --max-width: 375px;
-    width: min(var(--max-width), 100% - var(--px-lg) * 2);
-    margin-inline: auto;
+    --max-width: 375px; /* Largura máxima para mobile */
+    width: min(var(--max-width), 100% - var(--px-lg) * 2); /* Largura responsíva com margem */
+    margin-inline: auto; /* Centraliza horizontalmente */
 }
 
+/* VISIBILIDADE RESPONSIVA */
 .desktop-only {
-    display: none;
+    display: none; /* Esconde no mobile */
 }
 
+/* LAYOUT - GRID COM COLUNAS IGUAIS */
 .even-columns {
-    display: grid;
-    gap: 1rem;
+    display: grid; /* Layout em grid */
+    gap: 1rem; /* Espaço entre itens */
 }
 
+/* LAYOUT - FLEXBOX */
 .flex {
-    display: flex;
+    display: flex; /* Layout flexível */
 }
 
+/* ESPAÇAMENTO ENTRE ELEMENTOS */
 .gap-1 {
-    gap: 1rem;
+    gap: 1rem; /* Espaço de 16px entre elementos filhos */
 }
 
+/* LAYOUT - GRID SIMPLES */
 .grid {
-    display: grid;
+    display: grid; /* Layout em grid */
 }
 
-@media (width >= 80em) {
+/* RESPONSIVIDADE PARA DESKTOP */
+@media (width >= 80em) { /* 1280px ou mais */
+    /* CONTAINER MAIOR PARA DESKTOP */
     .container {
-        --max-width: 80rem;
+        --max-width: 80rem; /* 1280px de largura máxima */
     }
 
-
+    /* MOSTRA ELEMENTOS APENAS NO DESKTOP */
     .desktop-only {
-        display: initial;
+        display: initial; /* Mostra no desktop */
     }
 
-    .even-columns{
-        grid-auto-flow: column;
-        grid-auto-columns: 1fr;
+    /* COLUNAS IGUAIS EM LINHA NO DESKTOP */
+    .even-columns {
+        grid-auto-flow: column; /* Itens em linha */
+        grid-auto-columns: 1fr; /* Colunas de tamanho igual */
     }
 }
