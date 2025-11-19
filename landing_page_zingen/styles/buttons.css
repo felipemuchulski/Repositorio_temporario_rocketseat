@@ -32,7 +32,11 @@
         var(--brand-color-secondary) 0%, /* Laranja no início */
         var(--brand-color-primary) 100% /* Amarelo no final */
     );
+
+    -webkit-background-clip: initial;
+    background-clip: initial;
     --btn-color: var(--surface-color); /* Texto cinza escuro */
+    color: var(--btn-color);
 }
 
 /* TAMANHOS DE BOTÃO */
@@ -76,4 +80,19 @@
         background-clip: text; /* Recorta fundo apenas no texto */
         color: transparent; /* Torna o texto transparente para mostrar o gradient */
     }
+}
+
+@media (width >= 80em) {
+
+/* Botão médio */
+.btn-sm {
+    padding: .75rem 1.5rem; /* 12px vertical, 24px horizontal */
+    font-size: var(--fs-base); /* 16px */
+}
+
+/* Botão grande */
+.btn-md {
+    padding: 1rem 2rem; /* 16px vertical, 32px horizontal */
+   
+}
 }

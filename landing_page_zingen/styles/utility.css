@@ -39,9 +39,18 @@
     display: flex; /* Layout flexível */
 }
 
+.items-center {
+    align-items: center;
+}
+
 /* ESPAÇAMENTO ENTRE ELEMENTOS */
 .gap-1 {
     gap: 1rem; /* Espaço de 16px entre elementos filhos */
+}
+
+.gap-1\.5 {
+    gap: 1.5rem;
+
 }
 
 /* LAYOUT - GRID SIMPLES */
