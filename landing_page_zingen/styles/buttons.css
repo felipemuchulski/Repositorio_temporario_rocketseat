@@ -68,7 +68,7 @@
         content: ""; /* Conteúdo vazio */
         position: absolute; /* Posicionamento absoluto */
         border-radius: inherit; /* Herda border-radius do pai */
-        inset: 0.09375rem; /* Margem interna de 1.5px */
+        inset: 1px;
         background-color: var(--bg-color); /* Fundo preto */
     }
 
