@@ -75,6 +75,8 @@
     /* Pseudo-elemento para texto com gradient */
     &::after {
         content: attr(aria-label); /* Usa o valor do aria-label como texto */
+        position: relative; /* Posicionamento relativo */
+        z-index: 1; /* Fica acima do ::before */
         background: var(--btn-bg-color); /* Aplica gradient como fundo */
         -webkit-background-clip: text; /* Recorta fundo apenas no texto (WebKit) */
         background-clip: text; /* Recorta fundo apenas no texto */
