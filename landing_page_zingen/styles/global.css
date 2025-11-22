@@ -98,8 +98,13 @@ a:hover {
 }
 
 /* LISTAS SEM MARCADORES */
-ul[role=""] {
+ul[role="list"] {
     list-style: none; /* Remove bullets das listas */
+}
+
+img {
+    max-width: 100%;
+    display: inline-block;
 }
 
 /* RESPONSIVIDADE PARA DESKTOP */
