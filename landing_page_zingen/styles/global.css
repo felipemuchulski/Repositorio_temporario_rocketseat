@@ -52,6 +52,8 @@ html {
     line-height: 1.6; /* Altura da linha para legibilidade */
     color: var(--text-color-primary); /* Cor de texto padrão */
     overflow-x: hidden;
+
+    scroll-behavior: smooth;
 }
 
 /* FUNDO DA PÁGINA */
