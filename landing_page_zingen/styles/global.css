@@ -51,6 +51,7 @@ html {
     font-size: var(--fs-base); /* Tamanho base 16px */
     line-height: 1.6; /* Altura da linha para legibilidade */
     color: var(--text-color-primary); /* Cor de texto padrão */
+    overflow-x: hidden;
 }
 
 /* FUNDO DA PÁGINA */
