@@ -84,7 +84,7 @@
     }
 }
 
-@media (width >= 80em) {
+@media (width >= 64em) {
 
 /* Botão médio */
 .btn-sm {

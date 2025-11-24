@@ -108,7 +108,7 @@ img {
 }
 
 /* RESPONSIVIDADE PARA DESKTOP */
-@media (width >= 80em) { /* 1280px ou mais */
+@media (width >= 64em) { /* 1024px ou mais */
     :root {
         /* TAMANHOS MAIORES PARA DESKTOP */
         --fs-lg: 2rem; /* 32px */

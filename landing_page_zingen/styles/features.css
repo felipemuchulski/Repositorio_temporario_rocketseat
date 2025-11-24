@@ -1,4 +1,4 @@
-@media (width >= 80em) {
+@media (width >= 64em) {
     #features {
         & .cards {
             grid-template-columns: 17.5rem 1fr 1fr 17.5rem;

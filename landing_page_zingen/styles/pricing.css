@@ -40,7 +40,7 @@
     }
 }
 
-@media (width >= 80em) {
+@media (width >= 64em) {
     #pricing {
         --fs-price: 2.5rem;
         

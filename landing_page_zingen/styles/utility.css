@@ -59,7 +59,7 @@
 }
 
 /* RESPONSIVIDADE PARA DESKTOP */
-@media (width >= 80em) { /* 1280px ou mais */
+@media (width >= 64em) { /* 1024px ou mais */
     /* CONTAINER MAIOR PARA DESKTOP */
     .container {
         --max-width: 80rem; /* 1280px de largura máxima */
