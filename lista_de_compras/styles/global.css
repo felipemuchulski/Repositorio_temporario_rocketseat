@@ -1,0 +1,45 @@
+/*Reset do estilos padrão do navegador*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+    font-size: 62.5%;
+
+    --bg-color-primary: #F4F5FB;
+    --bg-color-secondary: #FFFF;
+
+    --cl-brand: #CA388A;
+    --cl-brand-hover: #A52C6B;
+    --cl-danger: #C93847;
+
+    --ct-primary: #080B12;
+    --ct-secondary: #374151;
+    --ct-tertiary: #9CA3AF;
+    --al-white: #FFFFFF;
+
+    --br-primary: #D1D5DB;
+    --br-hover: #B9C2D0; 
+
+    --ff-sans: "Inter", sans-serif;
+
+    --fs-small: 1.4rem;
+    --fm-base: 1.6rem;
+    --fm-sbold: 1.6rem;
+    --fb-bold: 2.4rem;
+
+    --fw-base: 400;
+    --fw-md: 500;
+    --fw-bold: 800;
+}
