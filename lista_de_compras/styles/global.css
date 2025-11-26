@@ -43,3 +43,16 @@
     --fw-md: 500;
     --fw-bold: 800;
 }
+
+
+html {
+    font-family: var(--ff-sans);
+    font-weight: var(--fw-base);
+    overflow-x: hidden;
+    color: var(--ct-primary);
+}
+
+
+body {
+    background-color: var(--bg-color-primary);
+}
