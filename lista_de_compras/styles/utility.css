@@ -1,0 +1,41 @@
+/*Espaçamentos*/
+
+
+
+
+/*CONTAINER*/
+.container {
+    --max-width: 3.75rem;
+    margin-inline: auto;
+}
+
+
+.flex {
+    display: flex;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.even-rows {
+    display: flex;
+    flex-direction: row;
+    gap: 1.6rem;
+}
+
+.even-columns {
+    display: grid;
+    gap: 1.6rem;
+}
+
+
+.space-between { 
+    justify-content: space-between;
+}
+
+@media (width >= 64em) {
+    .even-columns {
+        gap: 1.2rem;
+    }
+}

@@ -1,0 +1,50 @@
+.btn {
+    border: 0;
+    background-color: transparent;
+
+    --btn-bg-color: var(--cl-brand);
+    color: var(--al-white);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+
+    border-radius: .5rem;
+
+    font-family: var(--ff-sans);
+    font-size: var(--fm-sbold);
+
+    cursor: pointer;
+    background: var(--btn-bg-color);
+}
+
+
+.btn:hover {
+    background-color: var(--cl-brand-hover);
+    -webkit-background-clip: initial;
+    background-clip: initial;
+}
+
+.btn-md {
+    width: 5.7rem;
+    color: var(--cl-brand);
+}
+
+.btn-lg {
+    width: 32.6rem;
+    color: var(--al-white);
+}
+
+.btn-alert-close {
+    background: none;
+    color: var(--al-white);
+    font-size: 1.4rem;
+    margin-left: 1.2rem;
+}
+
+@media (width >= 64em) {
+    .btn-lg {
+       width: 16rem; 
+    }
+}

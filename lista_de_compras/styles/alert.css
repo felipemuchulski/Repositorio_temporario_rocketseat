@@ -1,0 +1,24 @@
+ .alert-item {
+    width: 32.7rem;
+    height: 4.4rem;
+
+    background-color: var(--cl-danger);
+    color: var(--al-white);
+    border-radius: 0.8rem;
+    padding: 0.8rem 1rem;
+    font-family: var(--ff-sans); 
+ }
+
+ .alert-icon {
+    margin-right: 0.8rem;
+ }
+
+ .alert-text {
+    flex: 1;
+ }
+
+ @media (width >= 64rem) {
+    .alert-item {
+        width: 62.7rem;
+    }
+ }
