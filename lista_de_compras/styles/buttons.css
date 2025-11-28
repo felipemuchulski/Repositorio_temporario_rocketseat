@@ -33,6 +33,7 @@
 
 .btn-lg {
     width: 32.6rem;
+    height: 4.4rem;
     color: var(--al-white);
 }
 
@@ -45,6 +46,8 @@
 
 @media (width >= 64em) {
     .btn-lg {
+       display: flex;
+       flex-direction: row;
        width: 16rem; 
     }
 }

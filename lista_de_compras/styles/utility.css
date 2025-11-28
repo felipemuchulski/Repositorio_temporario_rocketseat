@@ -1,14 +1,37 @@
 /*Espaçamentos*/
-
-
-
-
-/*CONTAINER*/
-.container {
-    --max-width: 3.75rem;
-    margin-inline: auto;
+.title-gap {
+    gap: 0.8rem;
 }
 
+.bottom-sml {
+    margin-bottom: 1.6rem;
+}
+
+.bottom-title {
+    margin-bottom: 4.4rem;
+}
+
+.bottom-input {
+    margin-bottom: 4.0rem;
+}
+
+.bottom-list {
+    margin-bottom: 3.6rem;
+}
+
+.margin-top-title {
+    margin-top: 1.6rem;
+}
+/*CONTAINER*/
+.container {
+    max-width: 32.7rem;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.justify-content {
+    justify-content: center;
+}
 
 .flex {
     display: flex;
@@ -35,7 +58,13 @@
 }
 
 @media (width >= 64em) {
+    .container {
+        max-width: 63.1rem;
+    }
     .even-columns {
-        gap: 1.2rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1.6rem;
     }
 }

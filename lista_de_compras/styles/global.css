@@ -54,6 +54,13 @@ html {
     color: var(--ct-primary);
 }
 
+header {
+    height: 4.4rem;
+}
+
+header img {
+    height: 2.3rem;
+}
 
 body {
     background-color: var(--bg-color-primary);

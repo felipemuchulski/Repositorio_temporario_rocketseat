@@ -1,0 +1,14 @@
+.title {
+    font-size: var(--fb-bold);
+    font-weight: var(--fw-bold);
+    color: var(--ct-primary);
+
+}
+
+.link-voltar {
+    text-decoration: none;
+    color: var(--cl-brand);
+    font-size: var(--fm-base);
+    font-weight: var(--fw-md);
+}
+
