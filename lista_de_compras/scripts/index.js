@@ -13,19 +13,29 @@
 */
 
 // Pega o botao de adicionar o item
-const btnAddItem = document.getElementById("add_item");
+const btnAddItem = document.getElementById("add_btn");
+
+// pega o valor do input
+const inputItem = document.getElementById("add_item")
 
 // Pega o id da ul
-const ul_id = document.getElementById("")
+const ul_id = document.getElementById("ul-list");
+const novaLi = document.createElement("li")
+
+novaLi.classList.add("list-item");
+
 
 
 
 // Cria o input checkbox
-let input_checkbox = document.createElement("input");
-input_checkbox.type = "checkbox";
-input_checkbox.classList.add("input-checkbox");
+const inputCheckbox = document.createElement("input");
+inputCheckbox.type = "checkbox";
+inputCheckbox.classList.add("input-checkbox");
 
+
+
+// Pega o conteúdo do adicionar item
 
 btnAddItem.addEventListener("click", () => {
-    
+
 })
