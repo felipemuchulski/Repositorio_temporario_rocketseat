@@ -14,7 +14,7 @@
 
 // Pega os elementos
 const btnAddItem = document.getElementById("add_btn");
-const inputItem = document.getElementById("add_item")
+const inputItem = document.getElementById("add_item");
 const ul_id = document.getElementById("ul-list");
 const footerAlert = document.getElementById("footer-alert");
 
@@ -50,7 +50,29 @@ btnAddItem.addEventListener("click", () => {
         novaLi.remove();
 
         const divAlert = document.createElement("div");
-        divAlert.classList.add("alert-item")
+        divAlert.classList.add("alert-item", "flex", "items-center");
+
+        const iconAlert = document.createElement("span");
+        iconAlert.classList.add("alert-icon");
+        iconAlert.textContent = "⚠️";
+
+        const textoRemovido = document.createElement("p");
+        textoRemovido.classList.add("alert-text");
+        textoRemovido.textContent = "O item foi removido da lista";
+
+        const btnRemoveAlert = document.createElement("button");
+        btnRemoveAlert.classList.add("btn-delete");
+        btnRemoveAlert.textContent = "❌";
+
+        divAlert.appendChild(iconAlert);
+        divAlert.appendChild(textoRemovido);
+        divAlert.appendChild(btnRemoveAlert);
+
+        footerAlert.appendChild(divAlert);
+
+        btnRemoveAlert.addEventListener("click", () => {
+            divAlert.remove();
+        });
 
         
     });
