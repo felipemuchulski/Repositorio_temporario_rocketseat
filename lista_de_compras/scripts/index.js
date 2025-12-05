@@ -12,30 +12,52 @@
 
 */
 
-// Pega o botao de adicionar o item
+// Pega os elementos
 const btnAddItem = document.getElementById("add_btn");
-
-// pega o valor do input
 const inputItem = document.getElementById("add_item")
-
-// Pega o id da ul
 const ul_id = document.getElementById("ul-list");
-const novaLi = document.createElement("li")
-
-novaLi.classList.add("list-item");
+const footerAlert = document.getElementById("footer-alert");
 
 
-
-
-// Cria o input checkbox
-const inputCheckbox = document.createElement("input");
-inputCheckbox.type = "checkbox";
-inputCheckbox.classList.add("input-checkbox");
-
-
-
-// Pega o conteúdo do adicionar item
 
 btnAddItem.addEventListener("click", () => {
+    const valorInput = inputItem.value.trim();
+    
+    // Limpa o input sempre
+    inputItem.value = "";
+    
+    // Validação para evitar itens vazios
+    if (valorInput === "") return;
+    
+    // Cria a Li
+    const novaLi = document.createElement("li");
+    novaLi.classList.add("list-item");
 
+    // Cria o input checkbox
+    const inputCheckbox = document.createElement("input");
+    inputCheckbox.type = "checkbox";
+    inputCheckbox.classList.add("input-checkbox");
+
+    // Cria o label para o texto do item
+    const labelItem = document.createElement("label");
+    labelItem.textContent = valorInput;
+
+    // Botão de remover
+    const btnRemove = document.createElement("button");
+    btnRemove.classList.add("btn-delete");
+    btnRemove.textContent = "🗑️";
+    btnRemove.addEventListener("click", () => {
+        novaLi.remove();
+
+        const divAlert = document.createElement("div");
+        divAlert.classList.add("alert-item")
+
+        
+    });
+
+    novaLi.appendChild(inputCheckbox);
+    novaLi.appendChild(labelItem);
+    novaLi.appendChild(btnRemove);
+
+    ul_id.appendChild(novaLi);
 })
