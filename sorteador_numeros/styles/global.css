@@ -1,0 +1,89 @@
+/* Seletor universal (*) - seleciona TODOS os elementos da página */
+/* ::before e ::after são pseudo-elementos que criam elementos virtuais */
+/* antes e depois do conteúdo de cada elemento */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+
+    
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+
+    font-size: 62.5%;
+
+    --content-primary: #FFFFFF;
+    --content-secondary: #C7C9CC;
+    --content-tertiary: #D9D9D9;
+    --content-brand: #C58DE7;
+    --color-inversive: #030203;
+
+    --background-primary: #020202;
+    --background-secondary: #111012;
+    --background-tertiary: #24222E;
+    --background-brand: #C58DE7;
+    --background-gray: #3D3D3D;
+
+    --accent-pink: #D586E0;
+    --accent-blue: #91A1FA;
+    --accent-green: #77C0A7;
+    --accent-lime: #D1DC97;
+    --accent-red: #E9A9B3;
+
+    --gradient-border: linear-gradient(
+        
+        #77C0AF 0%,
+        #D1DC97 14.84%,
+        #E9A9B3 32.15%,
+        #D586E0 65.79%,
+        #91A1FA 84.58%
+    );
+
+    --gradient-background: linear-gradient(
+         #D586E0 0%, 
+         #91A1FA 98.93%   
+    );
+
+    --gradient-content: linear-gradient(
+          #C7C9CC 0%, 
+          #3D3D3D 100%  
+    )
+
+    --font-sora:"Sora", sans-serif;
+    --font-mono:"Roboto Mono", monospace;
+    --font-flex:"Roboto Flex", sans-serif;
+
+    --display-large-sora-size: 7.2rem;
+    --display-large-sora-line: 130%;
+    --display-large-sora-weight: 800;
+    /*large recebe Uppercase*/
+
+    --display-medium-sora-size: 4rem;
+    --display-medium-sora-line: 130%;
+    --display-medium-sora-weight: 800;
+    /*medium recebe Uppercase*/
+
+    --display-small-sora-size: 3.2rem;
+    --display-small-sora-line: 130%;
+    --display-small-sora-weight: 700;
+    /*small recebe Uppercase */
+
+    --overline-roboto-size: 1.6rem;
+    --overline-roboto-line: 150%;
+    --overline-roboto-weight: 700;
+    /* overline recebe Uppercase */
+    
+    --paragraph-large-flex-size: 1.6rem;
+    --paragraph-large-flex-line: 150%;
+}
+
+
