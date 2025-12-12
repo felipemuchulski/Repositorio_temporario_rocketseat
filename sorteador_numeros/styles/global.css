@@ -82,8 +82,26 @@
     --overline-roboto-weight: 700;
     /* overline recebe Uppercase */
     
+    /*Default o tamanho da letra sem upper*/
     --paragraph-large-flex-size: 1.6rem;
     --paragraph-large-flex-line: 150%;
+    --paragraph-large-flex-weight: 500;
+    --paragraph-medium-flex-size: 1.6rem;
+    --paragraph-medium-flex-line: 150%;
+    --paragraph-medium-flex-weight: 500;
+
+    --paragraph-small-flex-size: 1.2rem;
+    --paragraph-small-flex-line: 150%;
+    --paragraph-small-flex-weight: 500;
+    --label-medium-flex-size: 2.0rem;
+    --label-medium-flex-line: 150%;
+    --label-medium-flex-weight: 700;
+    --label-small-flex-size: 1.6rem;
+    --label-small-flex-line: 150%;
+    --label-small-flex-weight: 700;
+
 }
+
+
 
 

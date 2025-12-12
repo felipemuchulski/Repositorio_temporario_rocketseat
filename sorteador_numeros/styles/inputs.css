@@ -1,0 +1,9 @@
+.input-number-field {
+    background: var(--background-secondary);
+    color: var(--content-primary);
+    max-width: 8.6rem;
+}
+
+.gap-input {
+    gap: 1.2rem;
+}
