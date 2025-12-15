@@ -7,3 +7,73 @@
 .gap-input {
     gap: 1.2rem;
 }
+
+.toggle-input {
+    
+}
+
+/*
+=== TOGGLE SWITCH ===
+
+HTML:
+<div class="toggle-container">
+  <input type="checkbox" id="toggle" class="toggle-input">
+  <label for="toggle" class="toggle-label">
+    <span class="toggle-slider"></span>
+  </label>
+  <span class="toggle-text">Não repetir número</span>
+</div>
+
+CSS:
+.toggle-container {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.toggle-input {
+  display: none;
+}
+
+.toggle-label {
+  position: relative;
+  width: 5.2rem;
+  height: 2.8rem;
+  background: var(--background-gray);
+  border-radius: 2.8rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-slider {
+  position: absolute;
+  top: 0.4rem;
+  left: 0.4rem;
+  width: 2rem;
+  height: 2rem;
+  background: var(--content-primary);
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.toggle-input:checked + .toggle-label {
+  background: var(--accent-pink);
+}
+
+.toggle-input:checked + .toggle-label .toggle-slider {
+  transform: translateX(2.4rem);
+}
+
+.toggle-text {
+  font-family: var(--font-flex);
+  font-size: var(--paragraph-medium-flex-size);
+  font-weight: var(--paragraph-medium-flex-weight);
+  color: var(--content-primary);
+}
+
+JavaScript (opcional):
+const toggle = document.getElementById('toggle');
+toggle.addEventListener('change', function() {
+  console.log('Toggle ativo:', this.checked);
+});
+*/
