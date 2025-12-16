@@ -1,12 +1,71 @@
+body {
+    background: var(--background-primary) url('../assets/img/Shapes.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
 .header {
+    position: absolute;
+    top: 7.6rem;
     margin-left: 12rem;
-    margin-top: 7.6rem;
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+
+}
+
+.h2-header {
+    font-family: var(--font-sora);
+    font-size: var(--display-medium-sora-size);
+    font-weight: var(--display-medium-sora-weight);
+    color: var(--content-primary);
+    text-transform: uppercase;
+
+    
+
 }
 
 .container {
-   max-width: 109.8rem;
-   margin: 0 auto;
+   width: 109.8rem;
+   margin-left: 13.4rem;
+   padding-top: 15rem;
+}
 
+.span-header-container {
+    font-family: var(--font-mono);
+    font-size: var(--overline-roboto-size);
+    line-height: var(--overline-roboto-line);
+    font-weight: var(--overline-roboto-weight);
+
+    color: transparent;
+    background: var(--gradient-content);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.title-page {
+    font-family: var(--font-sora);
+    font-size: var(--display-large-sora-size);
+    font-weight: 800;
+    color: var(--content-primary);
+}
+
+.questions {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.paragrafo-medium {
+    font-family: var(--font-flex);
+    font-size: var(--paragraph-medium-flex-size);
+    font-weight: var(--paragraph-medium-flex-weight);
+    line-height: 150%;
+
+    color: var(--content-brand);
 }
 
 .flex {
