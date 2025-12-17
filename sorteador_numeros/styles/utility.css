@@ -6,7 +6,7 @@ body {
     background-attachment: fixed;
     min-height: 100vh;
 }
-
+/*Header principal*/
 .header {
     position: absolute;
     top: 7.6rem;
@@ -46,11 +46,18 @@ body {
     background-clip: text;
 }
 
+/* Container da pagina*/
+
 .title-page {
     font-family: var(--font-sora);
     font-size: var(--display-large-sora-size);
     font-weight: 800;
     color: var(--content-primary);
+}
+
+.left-content {
+    display: flex;
+    flex-direction: column;
 }
 
 .questions {
@@ -85,6 +92,30 @@ body {
     color: var(--content-secondary);
 }
 
+/*Formularios dentro do container da pagina*/
+
+.form-numeros {
+    margin-top: 3.4rem;
+    margin-left: 10.8rem;
+    
+    visibility: visible;
+}
+
+.h3-form{
+    font-family: var(--font-flex);
+    color: var(--content-primary);
+    font-size: 1.6rem;
+    font-weight: 800;
+}
+
+
+.label-numeros {
+    font-family: var(--font-flex);
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--content-secondary);
+}
+
 .flex {
     display: flex;
 }
@@ -95,7 +126,14 @@ body {
 
 .even-columns {
     display: grid;
-    gap: 10.8rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+}
+
+.three-columns {
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    gap: 6rem;
 }
 
 .sortear {
