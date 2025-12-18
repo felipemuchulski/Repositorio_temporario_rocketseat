@@ -101,6 +101,17 @@ body {
     visibility: visible;
 }
 
+.card-numeros {
+    display: flex;
+    gap: 1.2rem;
+}
+
+.label-numeros {
+    margin-top: 4rem;
+    margin-right: 1.2rem;
+}
+
+
 .h3-form{
     font-family: var(--font-flex);
     color: var(--content-primary);
