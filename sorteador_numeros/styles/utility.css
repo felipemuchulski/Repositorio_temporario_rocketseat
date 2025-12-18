@@ -111,6 +111,11 @@ body {
     margin-right: 1.2rem;
 }
 
+.numero-card {
+
+    width: 8.6rem;
+
+}
 
 .h3-form{
     font-family: var(--font-flex);
@@ -150,3 +155,37 @@ body {
 .sortear {
     max-width: 48.2rem;
 }
+
+/*
+
+/* Estilos para inputs dos números 
+.numero-card {
+    width: 8.6rem;
+    height: 4.8rem;
+    background: var(--background-secondary);
+    border: 1px solid var(--background-tertiary);
+    border-radius: 0.8rem;
+    color: var(--content-primary);
+    font-family: var(--font-flex);
+    font-size: 2.4rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 0;
+}
+
+.numero-card:focus {
+    outline: none;
+    border: 1px solid var(--accent-pink);
+}
+
+.numero-card::-webkit-outer-spin-button,
+.numero-card::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.numero-card[type=number] {
+    -moz-appearance: textfield;
+}
+
+*/
