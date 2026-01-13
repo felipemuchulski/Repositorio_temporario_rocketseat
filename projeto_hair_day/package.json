@@ -3,7 +3,7 @@
   "description": "Aplicação web para agendamento de corte de cabelo",
   "author": "Felipe Muchulski de Andrades",
   "scripts": {
-    "server": "json-server --watch server.json --port 5005",
+    "server": "json-server --watch server.json --port 3333",
     "dev": "webpack serve",
     "build": "webpack"
   },
