@@ -17,8 +17,6 @@ export async function scheduleDay(){
 
 
     // Renderiza as horas disponiveis
-    hoursLoad({date});
+    hoursLoad({date, dailySchedules});
 
-
-    // Os horários disponíveis (horário futuro + não agendado) do lado esquerdo da tela
 }
