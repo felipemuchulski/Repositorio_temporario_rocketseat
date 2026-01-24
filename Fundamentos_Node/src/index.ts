@@ -1,0 +1,1 @@
+console.log("Rodando em dev com tsx e em prod com node + dist")
