@@ -1,7 +1,9 @@
 import type { ServerResponse } from "node:http";
 import type { CreateProductDTO } from "../dtos/create-product.dto.js";
 import type { RequestWithBody } from "../types/request.js";
+import type { Product } from "../models/products.js";
 import { products } from "../database/products.db.js";
+import { randomUUID } from "node:crypto";
 
 function isCreateProductDTO(body: any): body is CreateProductDTO {
     return (
@@ -16,14 +18,22 @@ export function createProduct(req: RequestWithBody, res: ServerResponse){
         return res.end(JSON.stringify({message: "Body inválido"}))
     }
 
-    const body = req.body;
+    const product: Product = {
+        id: randomUUID(),
+        name: req.body.name,
+        price: req.body.price
+    }
 
-    products.push(body)
+    products.push(product)
     res.statusCode = 201;
-    return res.end(JSON.stringify(body))
+    return res.end(JSON.stringify(product))
 }
 
 export function listProducts(req: RequestWithBody, res: ServerResponse){
     res.statusCode = 200;
     return res.end(JSON.stringify(products));
+}
+
+export function deleteProduct(req: RequestWithBody, res: ServerResponse){
+    
 }
