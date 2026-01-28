@@ -1,6 +1,7 @@
 import type { ServerResponse } from "node:http";
 import type { CreateProductDTO } from "../dtos/create-product.dto.js";
 import type { RequestWithBody } from "../types/request.js";
+import { products } from "../database/products.db.js";
 
 function isCreateProductDTO(body: any): body is CreateProductDTO {
     return (
@@ -10,12 +11,19 @@ function isCreateProductDTO(body: any): body is CreateProductDTO {
 }
 
 export function createProduct(req: RequestWithBody, res: ServerResponse){
-    if(isCreateProductDTO(req.body)) {
+    if(!isCreateProductDTO(req.body)) {
         res.statusCode = 400;
         return res.end(JSON.stringify({message: "Body inválido"}))
     }
 
     const body = req.body;
+
+    products.push(body)
     res.statusCode = 201;
     return res.end(JSON.stringify(body))
+}
+
+export function listProducts(req: RequestWithBody, res: ServerResponse){
+    res.statusCode = 200;
+    return res.end(JSON.stringify(products));
 }
