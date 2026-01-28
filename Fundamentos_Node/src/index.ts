@@ -2,6 +2,7 @@ import http, {IncomingMessage, ServerResponse} from "node:http"
 import { bodyParserMiddleware } from "./middlewares/bodyParser.middlaware.js"
 import type { RequestWithBody } from "./types/request.js"
 import { createProduct } from "./controllers/product.controller.js"
+import { routes } from "./routes/rotas.js"
 
 const server = http.createServer((req: IncomingMessage, res: ServerResponse) => {
     // header padrao da API
@@ -9,14 +10,26 @@ const server = http.createServer((req: IncomingMessage, res: ServerResponse) => 
 
     // middleware
     bodyParserMiddleware(req as RequestWithBody, res, () => {
-        // controller
-        if (req.method === "POST" && req.url === "/products"){
-            return createProduct(req as RequestWithBody, res)
+        // // controller
+        // if (req.method === "POST" && req.url === "/products"){
+        //     return createProduct(req as RequestWithBody, res)
+        // }
+
+        // //fallback
+        // res.statusCode = 404
+        // return res.end(JSON.stringify({message: "Not found"}))
+
+        // Fazendo com routes
+        const route = routes.find((route) => {
+            route.method === req.method && route.path === req.url
+        })
+
+        if(!route){
+            res.writeHead(404)
+            return res.end("Rota não encontrada")
         }
 
-        //fallback
-        res.statusCode = 404
-        return res.end(JSON.stringify({message: "Not found"}))
+        return route.controller(req as RequestWithBody, res)
     })
 })
 
