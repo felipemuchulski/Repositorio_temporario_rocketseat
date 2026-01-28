@@ -1,25 +1,25 @@
-import http from "node:http"
-import { stringify } from "node:querystring";
+import http, {IncomingMessage, ServerResponse} from "node:http"
+import { bodyParserMiddleware } from "./middlewares/bodyParser.middlaware.js"
+import type { RequestWithBody } from "./types/request.js"
+import { createProduct } from "./controllers/product.controller.js"
 
-const server = http.createServer((req, res) => {
+const server = http.createServer((req: IncomingMessage, res: ServerResponse) => {
+    // header padrao da API
+    res.setHeader("Content-Type", "application/json")
 
-    const { method, url } = req
-    res.statusCode = 200;
-    res.setHeader("Content-Type", "application/json");
+    // middleware
+    bodyParserMiddleware(req as RequestWithBody, res, () => {
+        // controller
+        if (req.method === "POST" && req.url === "/products"){
+            return createProduct(req as RequestWithBody, res)
+        }
 
-
-    if (method === "GET" && url === "/products"){
-        return res.end(JSON.stringify({message: "Lista de produtos"}))
-    }
-
-    if (method === "POST" && url === "/products"){
-        return res.writeHead(201).end(JSON.stringify({message: "Criado produto"}))
-    }
-    return res.end(JSON.stringify({message: "Servidor rodando com TS", method}))
-
-    
+        //fallback
+        res.statusCode = 404
+        return res.end(JSON.stringify({message: "Not found"}))
+    })
 })
 
-server.listen(3000, () => {
-    console.log("Servidor rodando em http://localhost:3000");
-});
+server.listen(3333, () => {
+    console.log("Servidor rodando em http://localhost:3333")
+})
