@@ -11,13 +11,13 @@ const server = http.createServer((req: IncomingMessage, res: ServerResponse) => 
     bodyParserMiddleware(req as RequestWithBody, res, () => {
 
         // Fazendo com routes
-        const route = routes.find((route) => {
-            route.method === req.method && route.path === req.url
-        })
+       const route = routes.find(
+        (route) => route.method === req.method && route.path === req.url
+       )
 
         if(!route){
             res.writeHead(404)
-            return res.end("Rota não encontrada")
+            return res.end(JSON.stringify({message: "Rota não encontrada"}))
         }
 
         return route.controller(req as RequestWithBody, res)
