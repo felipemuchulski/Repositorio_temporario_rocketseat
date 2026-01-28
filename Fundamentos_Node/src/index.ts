@@ -1,7 +1,6 @@
 import http, {IncomingMessage, ServerResponse} from "node:http"
 import { bodyParserMiddleware } from "./middlewares/bodyParser.middlaware.js"
 import type { RequestWithBody } from "./types/request.js"
-import { createProduct } from "./controllers/product.controller.js"
 import { routes } from "./routes/rotas.js"
 
 const server = http.createServer((req: IncomingMessage, res: ServerResponse) => {
@@ -10,14 +9,6 @@ const server = http.createServer((req: IncomingMessage, res: ServerResponse) => 
 
     // middleware
     bodyParserMiddleware(req as RequestWithBody, res, () => {
-        // // controller
-        // if (req.method === "POST" && req.url === "/products"){
-        //     return createProduct(req as RequestWithBody, res)
-        // }
-
-        // //fallback
-        // res.statusCode = 404
-        // return res.end(JSON.stringify({message: "Not found"}))
 
         // Fazendo com routes
         const route = routes.find((route) => {
