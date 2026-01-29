@@ -35,5 +35,20 @@ export function listProducts(req: RequestWithBody, res: ServerResponse){
 }
 
 export function deleteProduct(req: RequestWithBody, res: ServerResponse){
-    
+    const id = req.params?.id
+
+    if(!id) {
+        res.statusCode = 400;
+        return res.end(JSON.stringify({message: "ID é obrigatório "}));
+    }
+
+    const index = products.findIndex((product) => product.id === id)
+    if(index === -1) {
+        res.statusCode = 404;
+        return res.end(JSON.stringify({message: "Produto não encontrado"}))
+    }
+
+    products.splice(index, 1)
+    res.statusCode = 204;
+    return res.end();
 }

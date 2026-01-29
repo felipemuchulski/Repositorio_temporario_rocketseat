@@ -1,3 +1,3 @@
-import type { CreateProductDTO } from "../dtos/create-product.dto.js";
+import type { Product } from "../models/products.js";
 
-export const products: CreateProductDTO[] = []
+export const products: Product[] = []
