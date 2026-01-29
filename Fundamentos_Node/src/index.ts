@@ -9,18 +9,28 @@ const server = http.createServer((req: IncomingMessage, res: ServerResponse) => 
 
     // middleware
     bodyParserMiddleware(req as RequestWithBody, res, () => {
+        const url  = req.url ?? ""
 
-        // Fazendo com routes
-       const route = routes.find(
-        (route) => route.method === req.method && route.path === req.url
-       )
+        const matched = routes.find((route) => {
+            return route.method === req.method && route.path.test(url)
+        })
 
-        if(!route){
-            res.writeHead(404)
+        if(!matched) {
+            res.writeHead(404);
             return res.end(JSON.stringify({message: "Rota não encontrada"}))
         }
 
-        return route.controller(req as RequestWithBody, res)
+        const match = url.match(matched.path)
+        const values = match?.slice(1) ?? []
+
+        const params: Record<string,string> = {};
+        matched.params.forEach((name, index) => {
+            params[name] = values[index]
+        });
+
+        (req as RequestWithBody).params = params
+
+        return matched.controller(req as RequestWithBody, res)
     })
 })
 

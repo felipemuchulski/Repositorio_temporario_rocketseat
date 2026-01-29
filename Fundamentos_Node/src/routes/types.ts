@@ -1,6 +1,6 @@
 import { IncomingMessage, ServerResponse } from "node:http";
 
-export type HTTPMethod = "GET" | "POST" | "PUT" | "DELETE" | "PATH";
+export type HTTPMethod = "GET" | "POST" | "PUT" | "DELETE" | "PATCH";
 
 export type Controller = (
     req: IncomingMessage,
@@ -11,5 +11,12 @@ export type Controller = (
 export interface Route {
     method: HTTPMethod;
     path: string;
+    controller: Controller;
+}
+
+export interface CompiledRoute {
+    method: HTTPMethod,
+    path: RegExp,
+    params: string[],
     controller: Controller;
 }
