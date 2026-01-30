@@ -6,7 +6,7 @@ export function parseRoutePath(path: string): { regex: RegExp; params: string[]}
     return "([^/]+)";
   });
 
-  const regex = new RegExp(`^${pathWithParams}(?:\\?;*)?$`);
+  const regex = new RegExp(`^${pathWithParams}$`);
 
   return { regex, params }
 }

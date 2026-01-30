@@ -1,9 +1,10 @@
-import { IncomingMessage, ServerResponse } from "node:http";
+import { ServerResponse } from "node:http";
+import type { RequestWithBody } from "../types/request.js";
 
 export type HTTPMethod = "GET" | "POST" | "PUT" | "DELETE" | "PATCH";
 
 export type Controller = (
-    req: IncomingMessage,
+    req: RequestWithBody,
     res: ServerResponse
 ) => void;
 
