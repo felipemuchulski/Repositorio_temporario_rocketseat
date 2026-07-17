@@ -51,3 +51,11 @@ strong {
   color: #f24d0d;
   text-transform: uppercase;
 }
+
+button {
+  background-color: #f24d0d;
+  padding: 12px 16px;
+  border-radius: 7px;
+  border: none;
+  color: #ffff;
+}
