@@ -1,11 +1,11 @@
-import { useSearchParams } from "react-router"
+import { useSearchParams, Link } from "react-router"
 export function Products(){
     const [searchParams] = useSearchParams()
     const category = searchParams.get("category")
 
     return (
         <div>
-            <a href="/">Voltar</a>
+            <Link to="/">Voltar</Link>
             <h1>Produtos</h1>
 
             {
