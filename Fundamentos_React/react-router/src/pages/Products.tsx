@@ -17,11 +17,11 @@ export function Products(){
             }
 
             <div className="cards">
-                <a href="/details/1"> Produto 1</a>
-                <a href="/details/2"> Produto 2</a>
-                <a href="/details/3"> Produto 3</a>
-                <a href="/details/4"> Produto 4</a>
-                <a href="/details/5"> Produto 5</a>
+                <Link to="/details/1">Produto 1</Link>
+                <Link to="/details/2">Produto 2</Link>
+                <Link to="/details/3">Produto 3</Link>
+                <Link to="/details/4">Produto 4</Link>
+                <Link to="/details/5">Produto 5</Link>
             </div>
         </div>
     )
