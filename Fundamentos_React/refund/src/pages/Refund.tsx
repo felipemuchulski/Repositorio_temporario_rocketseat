@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { useNavigate, useParams } from "react-router";
+import { Link, useNavigate, useParams } from "react-router";
 
 import { CATEGORIES, CATEGORIES_KEYS } from "../utils/categories";
+import fileSvg from "../assets/file.svg"
 import { Input } from "../components/Input";
 import { Select } from "../components/Select";
 import { Upload } from "../components/Upload";
@@ -73,6 +74,12 @@ export function Refund() {
           disabled={!!params.id}
         />
       </div>
+
+      {params.id && <Link to="https://www.google.com/" target="_blank" className="text-sm text-green-100 semibold flex items-center justify-center gap-2 my-6 hover:opacity-70
+      transition ease-linear">
+        <img src={fileSvg} alt="ícone de página" />
+        Abrir comprovante</Link>}
+        
 
       <Upload
         filename={filename && filename.name}
