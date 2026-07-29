@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "../components/Button";
 import { Input } from "../components/Input";
 import { RefundItem } from "../components/RefundItem";
+import type { RefundItemProps } from "../components/RefundItem";
 import { Pagination } from "../components/Pagination";
 
 import { formatCurrency } from "../utils/formatCurrency";
@@ -20,6 +21,7 @@ export function Dashboard() {
   const [name, setName] = useState("");
   const [page, setPage] = useState(1);
   const [totalOfPage, setTotalOfPages] = useState(10);
+  const [refunds, setRefunds] = useState<RefundItemProps[]>([REFUND_EXAMPLE])
 
   function fecthRefunds(event: React.FormEvent) {
     event.preventDefault();
@@ -58,15 +60,16 @@ export function Dashboard() {
         </Button>
       </form>
 
-      <div className="mt-6 flex flex-col gap-4 max-h-85.5 overflow-y-scroll">
-        <RefundItem
-          to="/"
-          id={REFUND_EXAMPLE.id}
-          name={REFUND_EXAMPLE.name}
-          category={REFUND_EXAMPLE.category}
-          amount={REFUND_EXAMPLE.amount}
-          categoryImg={REFUND_EXAMPLE.categoryImg}
-        />
+      <div className="my-6 flex flex-col gap-4 max-h-85.5 overflow-y-scroll">
+        {
+            refunds.map((item) => (
+                <RefundItem
+                  key={item.id}
+                  to={`/refund/${item.id}`}
+                  {...item}
+                />
+            ))
+        }
       </div>
 
       <Pagination

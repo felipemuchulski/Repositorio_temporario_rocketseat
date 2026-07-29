@@ -23,7 +23,7 @@ export function Upload({ filename = null, ...rest }: Props) {
 
         <label
           htmlFor="upload"
-          className="flex h-12 px-4 items-center bg-green-100 rounded-lg text-white cursor-pointer disabled: opacity-50 
+          className="flex h-12 px-4 items-center bg-green-100 rounded-lg text-white cursor-pointer disabled:opacity-50 
           hover:bg-green-200 transition ease-linear"
         >
           <img src={uploadSvg} alt="Ícone de upload" className="w-6 h-6" />
