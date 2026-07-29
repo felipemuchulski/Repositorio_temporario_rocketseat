@@ -33,7 +33,7 @@ export function RefundItem({
       </div>
 
       <span className="text-sm text-gray-100 font-semibold">
-        <small className="font-normal text-gray-200">R$ </small>
+        <small className="font-normal text-gray-200">R$</small>
         {amount}
       </span>
     </Link>

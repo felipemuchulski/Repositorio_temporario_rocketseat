@@ -2,14 +2,19 @@ import { useState } from "react";
 import { Button } from "../components/Button";
 import { Input } from "../components/Input";
 import { RefundItem } from "../components/RefundItem";
+
+import { formatCurrency } from "../utils/formatCurrency";
 import searchSvg from "../assets/search.svg";
 import { CATEGORIES } from "../utils/categories";
+
+
+
 
 const REFUND_EXAMPLE = {
   id: "123",
   name: "Felipe",
   category: "Transporte",
-  amount: "34,40",
+  amount: formatCurrency(34.5),
   categoryImg: CATEGORIES["transport"].icon,
 };
 
